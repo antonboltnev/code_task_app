@@ -1,0 +1,62 @@
+@mixin border {
+  border: solid 1px $border-base-color;
+  border-radius: $base-radius;
+  background: $csm-bg-color-light;
+  padding: $base-padding;
+}
+
+@mixin position-absolute-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+@mixin position-fixed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+//Переменные по css свойствам --------------------------------------------------------------------------------------
+
+$csm-main-font: Arial, serif;
+
+$csm-ultra-small-font-size: 10px;
+$csm-small-font-size: 12px;
+$csm-main-font-size: 14px;
+$csm-big-font-size: 16px;
+$csm-large-font-size: 18px;
+
+$csm-bold-text: bold;
+
+$csm-main-bg-color: #eff3f4;
+$csm-bg-color-light: #ffffff;
+$csm-bg-color-dark-grey: #2d2d2d;
+$csm-bg-color-success: #18a460;
+$csm-bg-color-error: #da4739;
+$csm-bg-color-warning: orange;
+$csm-bg-color-light-yellow: #ffdb80;
+$csm-link-btn-color: #005aab;
+$csm-yellow-bg-color: #fff7e6;
+
+$csm-popup-header-bg: #eff3f4;
+
+$csm-font-color-dark: #2d2d2d;
+$csm-font-color-light: #ffffff;
+$csm-font-color-grey: #a0a0a0;
+$-csm-font-color-dark-grey: #666666;
+
+$csm-base-width: 1280px;
+
+$padding: 8px;
+$margin: 8px;
+$base-padding: $padding $padding*2;
+$base-radius: 4px;
+$border-base-color: #d8d8d8;
+$border-salad-color: #8bd1af;
+$disabled-form-element: #d8d8d8;
+$form-label-color: #a0a0a0;

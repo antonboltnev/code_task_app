@@ -1,0 +1,430 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  overflow-y: auto;
+  line-height: normal;
+  :focus {outline:none};
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .application {
+    font-family: $csm-main-font;
+    font-size: $csm-main-font-size;
+    .main__wrapper {
+      max-width: $csm-base-width + 20px;
+      margin: 0 auto;
+      min-width: 1200px;
+    }
+    .csm-page-wrapper {
+      max-width: $csm-base-width;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+  }
+}
+
+//TEXT SIZE AND WEIGHT ----------------------------------------------------------------------------
+.ultra-small-text {
+  font-size: $csm-ultra-small-font-size;
+}
+
+.small-text {
+  font-size: $csm-small-font-size;
+}
+
+.normal-text {
+  font-size: $csm-main-font-size;
+}
+
+.big-text {
+  font-size: $csm-big-font-size;
+}
+
+.large-text {
+  font-size: $csm-large-font-size;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+//TEXT COLOR ---------------------------------------------------------------------------------
+.text-grey {
+  color: $csm-font-color-grey;
+}
+
+.text-dark-grey {
+  color: $-csm-font-color-dark-grey;
+}
+
+.text-green {
+  color: $csm-bg-color-success;
+}
+
+.text-red {
+  color: $csm-bg-color-error;
+}
+
+.text-black {
+  color: #2d2d2d;
+}
+
+//TEXT ALIGN -----------------------------------------------------------------------------------------
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+//ПЕРЕНОСЫ ТЕКСТА ---------------------------------------------------------------------------------------------------------
+.text-no-wrap {
+  white-space: nowrap;
+}
+
+//ПОЗИЦИОНИРОВАНИЕ ------------------------------------------------------------------------------------------------------
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex {
+  flex: 1 1 auto;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.align-flex-end {
+  align-items: flex-end;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.height {
+  height: 100%;
+}
+
+.width {
+  width: 100%;
+}
+
+//КОЛОНКИ -------------------------------------------------------------------------------------------------------
+$grid-width: 100%;
+$columns: 12;
+
+.col1 {
+  flex-basis: $grid-width/$columns;
+  max-width: $grid-width/$columns;
+}
+.col2 {
+  flex-basis: $grid-width/($columns/2);
+  max-width: $grid-width/($columns/2);
+}
+.col3 {
+  flex-basis: $grid-width/($columns/3);
+  max-width: $grid-width/($columns/3);
+}
+.col4 {
+  flex-basis: $grid-width/($columns/4);
+  max-width: $grid-width/($columns/4);
+}
+.col5 {
+  flex-basis: $grid-width/($columns/5);
+  max-width: $grid-width/($columns/5);
+}
+.col6 {
+  flex-basis: $grid-width/($columns/6);
+  max-width: $grid-width/($columns/6);
+}
+.col7 {
+  flex-basis: $grid-width/($columns/7);
+  max-width: $grid-width/($columns/7);
+}
+.col8 {
+  flex-basis: $grid-width/($columns/8);
+  max-width: $grid-width/($columns/8);
+}
+.col9 {
+  flex-basis: $grid-width/($columns/9);
+  max-width: $grid-width/($columns/9);
+}
+.col10 {
+  flex-basis: $grid-width/($columns/10);
+  max-width: $grid-width/($columns/10);
+}
+.col11 {
+  flex-basis: $grid-width/($columns/11);
+  max-width: $grid-width/($columns/11);
+}
+.col12 {
+  flex-basis: $grid-width/($columns/12);
+  max-width: $grid-width/($columns/12);
+}
+
+
+//BORDERED ELEMENTS ------------------------------------------------------------------------------------
+.bordered-components {
+  border: solid 1px $border-base-color;
+  border-radius: $base-radius;
+  background: $csm-bg-color-light;
+  padding: $base-padding;
+}
+
+.bordered-hover {
+  @include border;
+  border: solid 1px transparent;
+  //margin: $padding 0;
+}
+
+.bordered-hover:hover {
+  @include border;
+}
+
+//SHADOWS ---------------------------------------------------------------------------------------------------------
+.shadowed {
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+//ОТСТУПЫ ------------------------------------------------------------------------------------------------------;
+.base-padding {
+  padding: $base-padding;
+}
+
+.mb1 {
+  margin-bottom: $margin*2;
+}
+.mb2 {
+  margin-bottom: $margin*3;
+}
+
+.mt1 {
+  margin-top: $margin*2;
+}
+.mt2 {
+  margin-top: $margin*3;
+}
+
+.ml1 {
+  margin-left: $margin*2;
+}
+.ml2 {
+  margin-left: $margin*3;
+}
+
+.ml3 {
+  margin-left: $margin*4;
+}
+
+.mr1 {
+  margin-right: $margin*2;
+}
+.mr2 {
+  margin-right: $margin*3;
+}
+
+//FORM-CONTROLS ------------------------------------------------------------------------------------------------------
+.csm-form-element-label {
+  color: $form-label-color;
+  font-size: $csm-small-font-size;
+}
+
+
+//PLACEHOLDERS ------------------------------------------------------------------------------------------------------
+.fake_holder {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: $form-label-color;
+  font-size: $csm-main-font-size;
+  transition: .5s;
+  white-space: nowrap;
+}
+
+.fake_holder.top-position {
+  top: -2px;
+}
+input:focus ~ .fake_holder,
+input.has-content ~ .fake_holder {
+  top: -10px;
+  font-size: $csm-small-font-size;
+  transition: .5s;
+}
+input.has-error ~ .fake_holder {
+  color: $csm-bg-color-error;
+}
+input:hover  ~ .fake_holder,
+input:hover.has-content ~ .fake_holder {
+  top: -10px;
+  font-size: $csm-small-font-size;
+  transition: .5s;
+}
+
+.fake_holder:hover {
+  top: -10px;
+  font-size: $csm-small-font-size;
+  transition: .5s;
+}
+
+.csm-select:focus ~ .fake_holder,
+.csm-select.has-content ~ .fake_holder {
+  top: -10px;
+  font-size: $csm-small-font-size;
+  transition: .5s;
+}
+.csm-select.has-error ~ .fake_holder {
+  color: #f25549;
+}
+.csm-select:hover ~ .fake_holder,
+.csm-select.has-content ~ .fake_holder {
+  top: -10px;
+  font-size: $csm-small-font-size;
+  transition: .5s;
+}
+
+.disabled-input ~ .fake_holder {
+  pointer-events: none;
+  top: 10px;
+}
+
+//STATES ------------------------------------------------------------------------------------------------------
+
+.hover:hover {
+  box-shadow: 0 0 1px 1px #d8d8d8;
+  border-radius: 4px;
+}
+
+.hover:hover .hover {
+  box-shadow: 0 0 1px 1px #d8d8d8;
+  border-radius: 4px;
+}
+
+//VUE TRANSITIONS -------------------------------------------------------------------------------------------------
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-leave-active {
+  transition: all .3s ease;
+}
+.slide-fade-enter-active {
+  transition: all .3s cubic-bezier(1.0, 0.8, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+
+//ICONS ------------------------------------------------------------------------------------------------------
+.csm-select-wrapper .material-icons {
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+  right: -4px;
+}
+
+.error-icon {
+  color: $csm-bg-color-error;
+}
+
+.warning-icon {
+  color: $csm-bg-color-warning;
+}
+
+//ИНФО БАРЫ ------------------------------------------------------------------------------------------------------
+
+.special-mark__content {
+  padding: $padding $padding*2;
+  border-radius: 4px;
+  width: fit-content;
+  &.error {
+    border: solid 1px $csm-bg-color-error;
+    background: $csm-bg-color-light;
+  }
+  &.warning {
+    border: solid 1px $csm-bg-color-light-yellow;
+    background: $csm-yellow-bg-color;
+  }
+}
+
+.special-mark__content .content__text {
+  margin-right: 20px;
+}
+
+.triangle-pointer.warning-color:before {
+  border-color: $csm-bg-color-light-yellow;
+  background-color: $csm-yellow-bg-color;
+}
+
+.triangle-pointer.error-color:before {
+  border-color: $csm-bg-color-error;
+  background-color: $csm-bg-color-light;
+}
